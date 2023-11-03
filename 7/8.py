@@ -1,4 +1,4 @@
-#8
+#8-1
 def func1(i):
     a = i
     while(a):
@@ -12,7 +12,7 @@ for i in range(1, n + 1):
     if (func1(i)):
         print(i)
 
-
+#8-2
 def func2(A):
     A[0], A[-1] = A[-1], A[0]
     return A
