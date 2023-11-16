@@ -1,14 +1,9 @@
 #10.1
 def find_max_ordered(matrix):
     max_element = 0
-
-    # Перебираем каждую строку матрицы
     for row in matrix:
-        # Проверяем, является ли строка упорядоченной
         if sorted(row) == row or sorted(row, reverse=True) == row:
-            # Находим максимальный элемент в упорядоченной строке
             current_max = max(row)
-            # Обновляем максимальный элемент, если текущий больше
             if current_max > max_element:
                 max_element = current_max
 
@@ -22,17 +17,17 @@ matr = [
 ]
 
 result = find_max_ordered(matr)
-print(result)  # Выведет: 8
+print(result)
 
 #10.2
 def sort_matrix_columns(matr):
-    m = len(matr)  # количество строк
-    n = len(matr[0])  # количество столбцов
+    m = len(matr)  
+    n = len(matr[0])  
 
-    for j in range(n):  # для каждого столбца матрицы
-        column = [matr[i][j] for i in range(m)]  # создаем список из элементов столбца
-        sorted_column = sorted(column)  # сортируем список элементов столбца
-        for i in range(m):  # заменяем элементы столбца отсортированными значениями
+    for j in range(n):  
+        column = [matr[i][j] for i in range(m)] 
+        sorted_column = sorted(column)  
+        for i in range(m):  
             matr[i][j] = sorted_column[i]
 
     return matr
